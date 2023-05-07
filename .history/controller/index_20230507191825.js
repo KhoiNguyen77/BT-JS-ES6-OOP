@@ -211,13 +211,13 @@ document.querySelector("#selUser").oninput = (e) => {
 
 let thName = document.querySelector(".sapXep")
 thName.style.cursor = "pointer";
-thName.setAttribute("sort-by", "asc");
+let sortBy = thName.setAttribute("sort-by", "asc");
 thName.onclick = () => {
     let sortBy = thName.getAttribute("sort-by");
-    userList.users = _.orderBy(userList.users, ['name'], [sortBy]);
+    let name = thName.innerHTML.trim();
+    userList.users = _.orderBy(userList.users, ['name'], ['sortBy']);
     if (sortBy == "asc") {
         sortBy = thName.setAttribute("sort-by", "desc");
-        
     } else {
         sortBy = thName.setAttribute("sort-by", "asc");
     }

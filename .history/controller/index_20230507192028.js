@@ -214,10 +214,10 @@ thName.style.cursor = "pointer";
 thName.setAttribute("sort-by", "asc");
 thName.onclick = () => {
     let sortBy = thName.getAttribute("sort-by");
+    let name = thName.innerHTML.trim();
     userList.users = _.orderBy(userList.users, ['name'], [sortBy]);
     if (sortBy == "asc") {
         sortBy = thName.setAttribute("sort-by", "desc");
-        
     } else {
         sortBy = thName.setAttribute("sort-by", "asc");
     }

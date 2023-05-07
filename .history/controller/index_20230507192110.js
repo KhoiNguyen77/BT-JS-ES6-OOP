@@ -217,7 +217,6 @@ thName.onclick = () => {
     userList.users = _.orderBy(userList.users, ['name'], [sortBy]);
     if (sortBy == "asc") {
         sortBy = thName.setAttribute("sort-by", "desc");
-        
     } else {
         sortBy = thName.setAttribute("sort-by", "asc");
     }

@@ -217,9 +217,11 @@ thName.onclick = () => {
     userList.users = _.orderBy(userList.users, ['name'], [sortBy]);
     if (sortBy == "asc") {
         sortBy = thName.setAttribute("sort-by", "desc");
+        document.querySelector(".fa fa-arrow-up").style.dislay = none;
         
     } else {
         sortBy = thName.setAttribute("sort-by", "asc");
+        document.querySelector(".fa fa-arrow-down").style.dislay = none;
     }
     document.querySelector("#tableDanhSach").innerHTML = userList.render();
     
